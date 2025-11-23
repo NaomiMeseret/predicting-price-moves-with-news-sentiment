@@ -1,0 +1,12 @@
+pandas>=2.2.2
+numpy>=1.26.4
+matplotlib>=3.8.4
+seaborn>=0.13.2
+scikit-learn>=1.4.2
+yfinance>=0.2.41
+# Only install TA-Lib on macOS; the script will fall back to pandas-ta elsewhere
+TA-Lib>=0.4.28; platform_system == "Darwin"
+pandas-ta>=0.3.14b0
+python-dateutil>=2.9.0.post0
+pytest>=8.2.0
+pynance>=1.0.0
