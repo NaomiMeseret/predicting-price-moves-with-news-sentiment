@@ -10,3 +10,4 @@ pandas-ta>=0.3.14b0
 python-dateutil>=2.9.0.post0
 pytest>=8.2.0
 pynance>=1.0.0
+textblob>=0.17.1

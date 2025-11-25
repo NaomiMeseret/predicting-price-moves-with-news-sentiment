@@ -217,3 +217,21 @@ These components satisfy the quantitative analysis requirements by:
 3. Use the generated CSVs and plots as inputs to further analysis, such as:
    - Correlating news sentiment (derived from headlines) with subsequent daily returns.
    - Studying how technical indicators interact with sentiment around major news events.
+
+## Branching and Pull Request Workflow
+
+- **Default branch**: `main` always reflects a green, deployable state.
+- **Feature branches**: create a new branch per task or feature, for example:
+  - `task-1-eda-news`
+  - `task-2-technical-indicators`
+  - `task-3-sentiment-correlation`
+- **Commit messages**: use short, descriptive, kebab-case messages, e.g.:
+  - `feat(eda): add topic modelling and publisher domains`
+  - `fix(indicators): handle missing price data gracefully`
+- **Pull requests**:
+  - Open a PR from the feature branch into `main` once CI is passing.
+  - Summarise the change, list scripts/notebooks touched, and attach a few key screenshots (plots) where helpful.
+  - Ensure at least one reviewer signs off before merging (or self-review with a checklist if working solo).
+- **Continuous integration**:
+  - GitHub Actions workflow `.github/workflows/unittests.yml` runs `pytest` on every push and PR.
+  - Only merge PRs when the checks are green to keep `main` stable.
